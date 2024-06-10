@@ -1,0 +1,364 @@
+:root{
+    --color : #0000ff;
+    --neo-color: #3b3bf9;
+}
+body{
+    background-color: #333;
+    min-height: 100vh;
+}
+html,body{
+    height: 130%;
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+button {
+    border-color: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+body.appear{
+    background-color: #fff;
+}
+.page1{
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #333;
+}
+
+
+@keyframes PageAnime1{
+    0%{
+        width: 0;
+        height: 1px;
+    }
+    50%{
+        width: 100vw;
+        height: 1px;
+        top: 50%
+    }
+    90%{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+    }
+    100%{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        display: none;
+    }
+}
+
+#aineee{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #fff;
+    z-index: 9999999;
+    animation-name: PageAnime1;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+#aineee_logo{
+    position: fixed;
+    top: 42%;
+    left: 40%;
+}
+.fadeUp{
+    font-size: 100px;
+    font-family: "Magz";
+    color: #00009e;
+    text-shadow: 
+    0 0 5px #2121f8,
+    0 0 10px #3232fd,
+    0 0 15px #3e3efb,
+    0 0 20px #5454f8,
+    0 0 40px #7373ff,
+    0 0 80px #9494f3;
+    animation-name: LogoAnime1;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes LogoAnime1{
+    0%,18%,22%,38%,42%,48%,52%,54%,56%,59%,61%{
+        text-shadow: 
+    0 0 5px #2121f8,
+    0 0 10px #3232fd,
+    0 0 15px #3e3efb,
+    0 0 20px #5454f8,
+    0 0 40px #7373ff,
+    0 0 80px #9494f3;
+    }
+    20%,40%,50%,55%,60%{
+        text-shadow: none;
+    }
+}
+.flex{
+    display: flex;
+}
+header{
+    height: 4rem;
+    width: 100vw;
+}
+.header{
+    position: fixed;
+    top: 0;
+}
+.header-logo{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: translate(-2rem,-0.5rem);
+    z-index: 300;
+}
+.header-logo img{
+    height: 3.5rem;
+    width: 3.5rem;
+    object-fit: cover;
+}
+
+.header-menu{
+    position: absolute;
+    width: 30px;
+    height: 2rem;
+    top: 0;
+    right: 0;
+    margin: 0 3rem 0 0;
+    transform: translate(0rem,1.5rem);
+    z-index: 1000;
+}
+
+
+.wrap{
+    padding-top: 5rem;
+    height: 100%;
+    width: 100%;
+    animation-name: Main;
+    animation-duration: 1s;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: -1;
+}
+
+#particles-js{
+	position:fixed;
+    top: 0;
+    left: 0;
+	width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+canvas {
+    display: block;
+}
+  
+@keyframes Main{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.i__a{
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    position: absolute;
+    left: 0;
+    background: var(--color);
+    border-radius: 10px;
+}
+
+.a1{
+    top:0%;
+}
+.a2{
+    top:30%;
+}
+
+.i__ab{
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    position: absolute;
+    left: -0.2rem;
+    top: 50%;
+    color: var(--color);
+}
+
+.aa1{
+    animation-name: Header-anime1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Header-anime1{
+    0%{
+    }
+    100%{
+        background-color: #fff;
+        transform: translateY(15px) rotate(-45deg);
+    }
+}
+
+.aa2{
+    animation-name: Header-anime2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Header-anime2{
+    0%{
+        width: 100%;
+    }
+    100%{
+        background-color: #fff;
+        width: 10%;
+        transform: translate(1.30rem,15px);
+    }
+}
+
+.aa11{
+    animation-name: Header-anime11;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Header-anime11{
+    0%{
+        transform: translate(0,15px) rotate(-45deg);
+    }
+    100%{
+        transform: translate(0,0) rotate(0deg);
+    }
+}
+
+.aa22{
+    animation-name: Header-anime22;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Header-anime22{
+    0%{
+        width: 10%;
+        transform: translate(1.30rem,15px);
+    }
+    100%{
+        width: 100%;
+        transform: translate(0,0);
+    }
+}
+
+.menu-list{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    background-color: #777;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Menu-list1{
+    0%{
+        opacity:0;
+        transform: translate(100vw,0);
+    }
+    100%{
+        opacity:1;
+        transform: translate(20vw,0);
+    }
+}
+
+@keyframes Menu-list2{
+    0%{
+        opacity:1;
+        transform: translate(20vw,0);
+    }
+    100%{
+        opacity:0;
+        transform: translate(100vw,0);
+        visibility: hidden;
+    }
+}
+
+
+.menu-list a{
+    color: #fff;
+}
+.menu-list-content{
+    padding: 50px 50px 50px 150px;
+}
+#up{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+#circle{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color);
+    text-align:center;
+    line-height: 47px;
+    box-shadow: 0 0 1rem var(--neo-color);
+    color: #fff;
+}
+
+#circle:hover{
+    background-color: #fff;
+    color: var(--color);
+}
+
+.main-logo{
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-5rem,0);
+}
+
+.main-logo img{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
