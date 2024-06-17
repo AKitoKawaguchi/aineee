@@ -1,4 +1,20 @@
 $(function(){
+    var day = [];
+    day.push(["4/3","12:00"]);
+    day.push(["4/3","12:00"]);
+    day.push(["4/2","12:00"]);
+    day.push(["4/1","12:00"]);
+    var obj = {};
+    day.forEach(e => {
+        console.log(e);
+      if (obj[e]) {
+        obj[e] += 1;
+       }else {
+       obj[e] = 1;
+      }
+    })
+
+    console.log(obj["4/3,12:00"]);
     $(".page1").delay(1650).fadeOut(100,function(){
         $("body").addClass("appear");
     })
